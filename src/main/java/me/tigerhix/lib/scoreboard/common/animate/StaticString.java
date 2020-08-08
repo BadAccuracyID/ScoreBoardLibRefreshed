@@ -2,7 +2,7 @@ package me.tigerhix.lib.scoreboard.common.animate;
 
 public class StaticString implements AnimatableString {
 
-    private String string;
+    private final String string;
 
     public StaticString(String string) {
         this.string = string;

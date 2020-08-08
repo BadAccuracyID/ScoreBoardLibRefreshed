@@ -50,21 +50,27 @@ public class FrameAnimatedString implements AnimatableString {
 
     @Override
     public String current() {
-        if (currentFrame == -1) return null;
+        if (currentFrame == -1)
+            return null;
+
         return frames.get(currentFrame);
     }
 
     @Override
     public String next() {
         currentFrame++;
-        if (currentFrame == frames.size()) currentFrame = 0;
+        if (currentFrame == frames.size())
+            currentFrame = 0;
+
         return frames.get(currentFrame);
     }
 
     @Override
     public String previous() {
         currentFrame--;
-        if (currentFrame == -1) currentFrame = frames.size() - 1;
+        if (currentFrame == -1)
+            currentFrame = frames.size() - 1;
+
         return frames.get(currentFrame);
     }
 

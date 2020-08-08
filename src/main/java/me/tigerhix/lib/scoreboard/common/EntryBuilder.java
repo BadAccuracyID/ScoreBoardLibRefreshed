@@ -31,6 +31,7 @@ public final class EntryBuilder {
      */
     public EntryBuilder next(String string) {
         entries.add(new Entry(adapt(string), entries.size()));
+
         return this;
     }
 
@@ -40,15 +41,17 @@ public final class EntryBuilder {
      * @return map
      */
     public List<Entry> build() {
-        for (Entry entry : entries) {
+        for (Entry entry : entries)
             entry.setPosition(entries.size() - entry.getPosition());
-        }
+
         return entries;
     }
 
     private String adapt(String entry) {
         // Cut off the exceeded part if needed
-        if (entry.length() > 48) entry = entry.substring(0, 47);
+        if (entry.length() > 48)
+            entry = entry.substring(0, 47);
+
         return Strings.format(entry);
     }
 

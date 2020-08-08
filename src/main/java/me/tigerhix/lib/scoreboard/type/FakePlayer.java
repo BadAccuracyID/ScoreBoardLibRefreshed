@@ -1,5 +1,5 @@
 package me.tigerhix.lib.scoreboard.type;
 
-public interface FakePlayer{
+public interface FakePlayer {
     void setBanned(boolean banned);
 }

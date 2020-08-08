@@ -15,7 +15,9 @@ public final class ScoreboardLib extends JavaPlugin {
     }
 
     public static void setPluginInstance(Plugin instance) {
-        if (ScoreboardLib.instance != null) return;
+        if (ScoreboardLib.instance != null)
+            return;
+
         ScoreboardLib.instance = instance;
     }
 
